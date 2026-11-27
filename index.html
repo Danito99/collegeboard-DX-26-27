@@ -13,7 +13,7 @@
   --page:#f9f9f7; --surface:#ffffff; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
   --rule:#e1e0d9; --axis:#c3c2b7; --navy:#0d366b; --blue:#2a78d6;
   --s1:#cde2fb; --s2:#86b6ef; --s3:#3987e5; --s4:#1c5cab; --s5:#0d366b;
-  --trap:#eb6834; --b-low2:#b8431c; --b-low1:#ec9a73; --b-mid:#d9d7cf; --b-hi1:#6da7ec; --b-hi2:#1c5cab;
+  --trap:#eb6834; --b-low2:#c00000; --b-low1:#ff0000; --b-mid:#ffff00; --b-hi1:#009900; --b-hi2:#ffc000;
   --key:#0d366b; --keybg:#e4eefc; --trapbg:#fdebe2; --wash:#f1f3f0;
   --display:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
   --body:"Newsreader",Georgia,"Times New Roman",serif;
@@ -22,7 +22,7 @@
   --page:#0d0d0d; --surface:#1a1a19; --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781;
   --rule:#2c2c2a; --axis:#383835; --navy:#9ec5f4; --blue:#3987e5;
   --s1:#184f95; --s2:#256abf; --s3:#3987e5; --s4:#86b6ef; --s5:#cde2fb;
-  --trap:#ec835a; --b-low2:#d95926; --b-low1:#a85a38; --b-mid:#383835; --b-hi1:#256abf; --b-hi2:#6da7ec;
+  --trap:#ec835a; --b-low2:#c00000; --b-low1:#ff0000; --b-mid:#ffff00; --b-hi1:#009900; --b-hi2:#ffc000;
   --key:#9ec5f4; --keybg:#10294a; --trapbg:#3a2015; --wash:#141413;
 }}
 *{box-sizing:border-box}
@@ -159,7 +159,7 @@ footer{border-top:1px solid var(--rule);padding:26px 0 60px;font-family:var(--di
 </head>
 <body>
 <header class="mast"><div class="wrap">
-  <div class="meta">Christel House México. Coordinación de Innovación Educativa y TIC. Corte del 13 de noviembre de 2026 · Versión 5 (23 nov, 14:20)</div>
+  <div class="meta">Christel House México. Coordinación de Innovación Educativa y TIC. Corte del 13 de noviembre de 2026 · Versión 6 (27 nov)</div>
   <h1>Diagnóstico College Board 2026–27</h1>
   <p class="lede">Análisis reactivo por reactivo de PHIEP (3°), PIENSE I (6°), PIENSE II (9°) y PAA (11°), con 552 reactivos y 224 alumnos, y una guía de trabajo para lo que resta del ciclo.</p>
 </div></header>
@@ -819,7 +819,7 @@ function cats(el,list,noChance){
    +(noChance?"":`<div class="axisnote">Línea punteada: 25%, lo esperado al responder al azar con cuatro opciones.</div>`);
 }
 const BCOL={5:["--b-low2","--b-low1","--b-mid","--b-hi1","--b-hi2"],4:["--b-low1","--b-mid","--b-hi1","--b-hi2"]};
-const BINK={"--b-low2":"#fff","--b-low1":"#0b0b0b","--b-mid":"var(--ink)","--b-hi1":"#0b0b0b","--b-hi2":"#fff"};
+const BINK={"--b-low2":"#fff","--b-low1":"#fff","--b-mid":"#0b0b0b","--b-hi1":"#fff","--b-hi2":"#0b0b0b"};
 function bands(el,t,secs){
   let h="",labsDone={};
   for(const s of secs){const S=D[t][s];const cols=BCOL[S.bandLabels.length];
